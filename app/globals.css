@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f3f4f6;
   --foreground: #171717;
+  --paper: #ffffff;
+  --paper-text: #171717;
+  --toolbar-bg: #e5e7eb;
+  --toolbar-border: #d1d5db;
+  --ruler: #9ca3af;
+  --link: #2563eb;
+  --divider: #d1d5db;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #ededed;
+  --paper: #1e1e1e;
+  --paper-text: #ededed;
+  --toolbar-bg: #2a2a2a;
+  --toolbar-border: #3a3a3a;
+  --ruler: #6b7280;
+  --link: #60a5fa;
+  --divider: #3a3a3a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-paper-text: var(--paper-text);
+  --color-toolbar-bg: var(--toolbar-bg);
+  --color-toolbar-border: var(--toolbar-border);
+  --color-ruler: var(--ruler);
+  --color-link: var(--link);
+  --color-divider: var(--divider);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.paper-texture {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 23px,
+    rgba(0, 0, 0, 0.03) 24px
+  );
+}
+
+.dark .paper-texture {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 23px,
+    rgba(255, 255, 255, 0.03) 24px
+  );
 }
