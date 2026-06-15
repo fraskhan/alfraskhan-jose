@@ -32,14 +32,7 @@ export default function HeaderSection() {
         >
           GitHub
         </a>
-        <a
-          href="https://fras-portfolio.vercel.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-link hover:underline"
-        >
-          Portfolio
-        </a>
+
       </div>
     </section>
   );
