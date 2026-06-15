@@ -2,6 +2,7 @@ import Toolbar from "./components/Toolbar";
 import Ruler from "./components/Ruler";
 import SectionDivider from "./components/SectionDivider";
 import PageNumber from "./components/PageNumber";
+import ProfilePhoto from "./components/ProfilePhoto";
 import HeaderSection from "./components/sections/HeaderSection";
 import EducationSection from "./components/sections/EducationSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
@@ -19,8 +20,9 @@ export default function Home() {
         <Toolbar />
       </div>
 
-      {/* Page Container */}
-      <div className="flex justify-center px-2 sm:px-4 py-4 sm:py-8">
+      {/* Main layout: resume paper + photo column */}
+      <div className="flex justify-center items-start gap-6 px-2 sm:px-4 py-4 sm:py-8">
+        {/* ── Resume Paper ──────────────────────────────────────────── */}
         <div className="w-full max-w-[210mm] bg-paper shadow-lg rounded-sm border border-divider overflow-hidden transition-colors duration-300">
           <Ruler />
 
@@ -45,6 +47,9 @@ export default function Home() {
             <PageNumber />
           </div>
         </div>
+
+        {/* ── Profile Photo (right column, desktop only) ────────────── */}
+        <ProfilePhoto />
       </div>
     </div>
   );

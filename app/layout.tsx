@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
+import { ThemeAnimationProvider } from "./context/ThemeAnimationContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-full antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
+          <ThemeAnimationProvider>{children}</ThemeAnimationProvider>
         </ThemeProvider>
       </body>
     </html>
