@@ -16,18 +16,14 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button
-        aria-label="Toggle theme"
-        className="p-1.5 rounded hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
-      >
-        <Sun className="w-4 h-4 opacity-0" />
-      </button>
+      <div className="w-[120px] h-8 rounded-full bg-black/10 dark:bg-white/10 animate-pulse" />
     );
   }
 
+  const isDark = theme === "dark";
+
   function handleToggle() {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    // Animate first, then swap theme
+    const nextTheme = isDark ? "light" : "dark";
     triggerAnimation(nextTheme === "dark" ? "forward" : "backward");
     setTheme(nextTheme);
   }
@@ -36,12 +32,26 @@ export default function ThemeToggle() {
     <button
       onClick={handleToggle}
       aria-label="Toggle theme"
-      className="p-1.5 rounded hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+      title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      className={`
+        relative flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold
+        border transition-all duration-300 select-none cursor-pointer
+        ${isDark
+          ? "bg-slate-800 border-slate-600 text-yellow-300 hover:bg-slate-700 hover:border-yellow-400 shadow-[0_0_12px_rgba(250,204,21,0.25)]"
+          : "bg-white border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 shadow-[0_1px_6px_rgba(0,0,0,0.12)]"
+        }
+      `}
     >
-      {theme === "dark" ? (
-        <Sun className="w-4 h-4 text-paper-text" />
+      {isDark ? (
+        <>
+          <Sun className="w-3.5 h-3.5 text-yellow-300" />
+          <span>Light Mode</span>
+        </>
       ) : (
-        <Moon className="w-4 h-4 text-paper-text" />
+        <>
+          <Moon className="w-3.5 h-3.5 text-slate-600" />
+          <span>Dark Mode</span>
+        </>
       )}
     </button>
   );
