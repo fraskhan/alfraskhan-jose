@@ -15,6 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Preload the light-mode idle frame so it paints before JS loads */}
+        <link
+          rel="preload"
+          as="image"
+          href="/profilepic/frame_01.webp"
+          type="image/webp"
+        />
+      </head>
       <body className="min-h-full antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ThemeAnimationProvider>{children}</ThemeAnimationProvider>

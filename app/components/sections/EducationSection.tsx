@@ -11,9 +11,9 @@ export default function EducationSection() {
           </h3>
           <p className="text-paper-text italic">B.S. in Information Technology</p>
         </div>
-        <div className="text-right">
-          <p className="text-sm text-paper-text sm:text-right">Zamboanga City, Philippines</p>
-          <p className="text-sm text-paper-text sm:text-right">April 2021 – April 2025</p>
+        <div className="text-left sm:text-right">
+          <p className="text-sm text-paper-text">Zamboanga City, Philippines</p>
+          <p className="text-sm text-paper-text">April 2021 – April 2025</p>
         </div>
       </div>
       <ul className="mt-2 list-disc list-inside text-sm text-paper-text space-y-1">

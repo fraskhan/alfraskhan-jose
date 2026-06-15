@@ -2,7 +2,7 @@ import Toolbar from "./components/Toolbar";
 import Ruler from "./components/Ruler";
 import SectionDivider from "./components/SectionDivider";
 import PageNumber from "./components/PageNumber";
-import ProfilePhoto from "./components/ProfilePhoto";
+import ProfilePhoto, { ProfilePhotoMobile } from "./components/ProfilePhoto";
 import HeaderSection from "./components/sections/HeaderSection";
 import EducationSection from "./components/sections/EducationSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
@@ -20,14 +20,19 @@ export default function Home() {
         <Toolbar />
       </div>
 
-      {/* Main layout: resume paper + photo column */}
-      <div className="flex justify-center items-start gap-6 px-2 sm:px-4 py-4 sm:py-8">
+      {/* Mobile profile strip — above the resume on small screens */}
+      <div className="lg:hidden px-4">
+        <ProfilePhotoMobile />
+      </div>
+
+      {/* Main layout: resume paper + desktop photo sidebar */}
+      <div className="flex justify-center items-start gap-6 px-2 sm:px-4 pb-8">
         {/* ── Resume Paper ──────────────────────────────────────────── */}
         <div className="w-full max-w-[210mm] bg-paper shadow-lg rounded-sm border border-divider overflow-hidden transition-colors duration-300">
           <Ruler />
 
           {/* Document Body */}
-          <div className="px-6 sm:px-12 md:px-16 py-6 sm:py-8 paper-texture">
+          <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-6 sm:py-8 paper-texture">
             <HeaderSection />
             <SectionDivider />
             <EducationSection />
