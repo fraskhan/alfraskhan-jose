@@ -6,11 +6,6 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Al-Fraskhan A. Jose — Portfolio",
   description: "Full-Stack Developer Portfolio of Al-Fraskhan A. Jose",
-  icons: {
-    icon: "/Fras J.webp",
-    shortcut: "/Fras J.webp",
-    apple: "/Fras J.webp",
-  },
 };
 
 export default function RootLayout({
