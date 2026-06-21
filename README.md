@@ -1,45 +1,54 @@
 # Al-Fraskhan A. Jose — Portfolio
 
-A one-page portfolio website designed to look like a word processor (Microsoft Word / Google Docs), built with Next.js 14+, React, TypeScript, and Tailwind CSS. Features a dark/light mode toggle and a responsive "paper" layout.
+A high-fidelity, one-page portfolio website designed to look like a modern word processor (Microsoft Word / Google Docs style), built with the latest web technologies.
+
+## Tech Stack
+
+- **Framework**: [Next.js 16 (App Router)](https://nextjs.org/)
+- **Library**: [React 19](https://reactjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Themes**: [next-themes](https://github.com/pacocoursey/next-themes) for dark/light mode toggle
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+## Features
+
+- **Word Processor UI**: A unique and premium "paper" layout with a functional toolbar, ruler, and centered document view.
+- **Dynamic Theme Animation**: A smooth, custom-built profile photo animation that transitions between dark and light modes.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop, with fluid margins and adaptive paper sizing.
+- **Interactive Components**: 
+  - Dark/Light mode toggle with instant theme switching.
+  - Page number footer that automatically shows the "current page".
+  - Section dividers and custom typography (Serif for body, Mono/Sans for headings).
+- **Comprehensive Resume Sections**: Header, Education, Experience, Projects, Activities, Skills, Seminars, and Achievements.
+- **Integrated CV Download**: Direct access to the latest PDF version of the CV.
 
 ## Getting Started
 
-Install dependencies and run the development server:
+First, install the dependencies:
 
 ```bash
 npm install
+```
+
+Then, run the development server:
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## Build for Static Export
+## Build and Export
+
+To build the project for production:
 
 ```bash
 npm run build
 ```
 
-The static export will be generated in the `dist/` directory, ready for deployment to any static hosting provider.
+The static export will be generated in the `dist/` directory, ready for deployment.
 
-## Tech Stack
+## License
 
-- Next.js 16 (App Router)
-- React 19
-- TypeScript
-- Tailwind CSS v4
-- next-themes (dark/light mode)
-- lucide-react (icons)
-
-## Features
-
-- Word processor-style UI with centered "paper" card, toolbar, and ruler
-- Dark / light mode toggle with instant switching
-- All content sections: Header, Education, Experience, Projects, Activities, Skills, Seminars, Achievements
-- Responsive design: paper fills the screen on mobile with shrinking margins
-- Clickable links (email, phone, LinkedIn, GitHub, Portfolio)
-- Serif typography for body text, monospace/sans-serif for headings
-- Subtle paper texture and page number footer
-
-## Deploy on Vercel
-
-The easiest way to deploy is via the [Vercel Platform](https://vercel.com/new) connected to your repository.
+This project is personal and for portfolio purposes.
